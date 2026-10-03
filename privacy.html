@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Privacy policy for apps by Alex Slem.">
+<style>[hidden]{display:none!important}img{max-width:100%}</style>
+<title>Privacy Policy · Absolute Synthesis</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Figtree:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a heartbeat line opens the page, then the apps grouped by what they do for you, each card carrying its own pulse color. */
+:root{
+  --bg:#0f0b14; --surface:#18121f; --surface-2:#211a2a; --line:#2f2639;
+  --fg:#f1ebf4; --muted:#a99bb3; --faint:#6f6379;
+  --ember:#ff7a4d; --rose:#ff4f8b; --gold:#f2c14e;
+  --display:"Syne", "Avenir Next", system-ui, sans-serif;
+  --body:"Figtree", -apple-system, "Segoe UI", system-ui, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme: light){
+  :root:not([data-theme="dark"]){
+    --bg:#f7f2f5; --surface:#ffffff; --surface-2:#f1e8ee; --line:#e3d6df;
+    --fg:#1d1522; --muted:#65566e; --faint:#9a8ca2;
+    --ember:#d9542a; --rose:#d42f6c; --gold:#b98510;
+    color-scheme:light;
+  }
+}
+:root[data-theme="light"]{
+  --bg:#f7f2f5; --surface:#ffffff; --surface-2:#f1e8ee; --line:#e3d6df;
+  --fg:#1d1522; --muted:#65566e; --faint:#9a8ca2;
+  --ember:#d9542a; --rose:#d42f6c; --gold:#b98510;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.55;margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:20px;padding-block:0 64px}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--rose);outline-offset:3px;border-radius:6px}
+
+/* Hero */
+header.hero{padding-block:56px 28px;display:grid;gap:18px}
+.eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.eyebrow .bpm{color:var(--rose);font-variant-numeric:tabular-nums}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--rose);box-shadow:0 0 0 0 var(--rose);animation:beat 0.9375s infinite}
+@keyframes beat{0%{transform:scale(1)}12%{transform:scale(1.6)}24%{transform:scale(1)}36%{transform:scale(1.35)}50%,100%{transform:scale(1)}}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(44px,9vw,104px);line-height:.92;letter-spacing:-.02em;margin:0;text-wrap:balance}
+h1 .grad{background:linear-gradient(90deg,var(--ember),var(--rose) 55%,var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lede{font-size:clamp(17px,2.2vw,20px);color:var(--muted);max-width:60ch;margin:0}
+.pulse{width:100%;height:110px;display:block}
+.stats{display:flex;flex-wrap:wrap;gap:10px 28px;font-family:var(--mono);font-size:13px;color:var(--muted)}
+.stats b{color:var(--fg);font-weight:500;font-variant-numeric:tabular-nums}
+
+/* Filters */
+nav.filters{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);padding-block:14px;display:flex;gap:8px;flex-wrap:wrap;border-bottom:1px solid var(--line);margin-bottom:28px}
+.chip{font:500 14px var(--body);color:var(--muted);background:transparent;border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer}
+.chip:hover{color:var(--fg);border-color:var(--faint)}
+.chip[aria-pressed="true"]{color:var(--bg);background:var(--fg);border-color:var(--fg)}
+.chip .n{font-family:var(--mono);font-size:12px;opacity:.7;margin-left:4px}
+
+/* Groups */
+section.group{margin-bottom:48px}
+.group-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+h2{font-family:var(--display);font-weight:700;font-size:clamp(24px,3.4vw,32px);margin:0;letter-spacing:-.01em}
+.group-head p{margin:0;color:var(--muted);font-size:15px;max-width:52ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr));gap:16px}
+
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px;display:flex;flex-direction:column;gap:14px;min-width:0;transition:border-color .2s, transform .2s}
+.card:hover{border-color:color-mix(in srgb,var(--hue) 60%,var(--line));transform:translateY(-2px)}
+.card-top{display:flex;gap:14px;align-items:center}
+.glyph{flex:none;width:56px;height:56px;border-radius:14px;background:radial-gradient(circle at 30% 25%,color-mix(in srgb,var(--hue) 85%,white),var(--hue) 45%,color-mix(in srgb,var(--hue) 40%,black));display:grid;place-items:center}
+.glyph svg{width:30px;height:30px}
+.card h3{font-family:var(--display);font-weight:700;font-size:20px;line-height:1.15;margin:0;text-wrap:balance}
+.sub{font-size:14px;color:var(--muted);margin:2px 0 0}
+.card p.blurb{margin:0;font-size:15px}
+.card ul{margin:0;padding-left:18px;display:grid;gap:4px;font-size:14px;color:var(--muted)}
+.card ul li::marker{color:var(--hue)}
+.card-foot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;padding-top:6px;border-top:1px solid var(--line)}
+.meta{font-family:var(--mono);font-size:12px;color:var(--faint);letter-spacing:.04em}
+.store{font:600 14px var(--body);text-decoration:none;color:var(--fg);padding:8px 14px;border-radius:999px;background:var(--surface-2);border:1px solid var(--line);white-space:nowrap}
+.store:hover{border-color:var(--hue)}
+.status{font-family:var(--mono);font-size:12px;padding:4px 10px;border-radius:999px;border:1px dashed var(--faint);color:var(--muted)}
+
+.about{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:24px 48px;padding-block:48px;border-top:1px solid var(--line);margin-bottom:8px}
+.about-head{display:grid;gap:12px;align-content:start}
+.about-body{display:grid;gap:14px;max-width:62ch;min-width:0}
+.about-body p{margin:0;font-size:17px}
+.about-body .signoff{color:var(--muted)}
+.about-body .signoff span{font-family:var(--display);font-weight:700;font-size:24px;color:var(--fg)}
+@media (max-width:760px){.about{grid-template-columns:1fr}}
+footer{border-top:1px solid var(--line);padding-top:28px;display:grid;gap:8px;color:var(--muted);font-size:15px}
+footer .foot-links{display:flex;flex-wrap:wrap;gap:8px 20px}
+footer .sig{font-family:var(--display);font-weight:700;font-size:22px;color:var(--fg)}
+
+@media (prefers-reduced-motion: reduce){.dot{animation:none}.card{transition:none}}
+</style>
+<style>
+.page{max-width:760px}
+.page h1{font-size:clamp(40px,7vw,72px)}
+.page h2{font-size:22px;margin:32px 0 8px}
+.page p,.page li{font-size:17px}
+.page ul{padding-left:20px;display:grid;gap:6px}
+.back{font-family:var(--mono);font-size:13px;color:var(--muted);text-decoration:none}
+.mailbox{display:flex;flex-wrap:wrap;gap:10px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-top:8px}
+.mailbox code{font-family:var(--mono);font-size:16px;user-select:all;word-break:break-all}
+.mailbox button{font:600 14px var(--body);color:var(--fg);background:var(--surface-2);border:1px solid var(--line);border-radius:999px;padding:7px 14px;cursor:pointer}
+.updated{font-family:var(--mono);font-size:13px;color:var(--faint)}
+</style>
+</head>
+<body>
+<div class="wrap page">
+  <header class="hero">
+    <a class="back" href="index.html">← All apps</a>
+    <h1>Privacy Policy</h1>
+    <p class="lede">The short version: what you do in my apps stays on your device. I don't collect it, sell it or share it.</p>
+    <p class="updated">Effective October 2, 2026 · Covers all apps published by Alex Slem on the App Store</p>
+  </header>
+  <h2>What I collect</h2>
+  <p>Nothing. My apps don't have accounts, ads, analytics or tracking, and they don't send your information to me or to anyone else.</p>
+  <h2>What stays on your device</h2>
+  <p>Some apps save things so they're there next time: journal entries and reflections, breathing sessions, heart-rate readings, game progress, and room scans. All of it is stored only on your iPhone or iPad. If you use iCloud backup, Apple may include it in your device backup under Apple's own privacy policy.</p>
+  <h2>Permissions</h2>
+  <p>An app asks before it uses any of these, and only for the feature that needs it:</p>
+  <ul>
+    <li><strong>Health and heart rate:</strong> to show and log your heart rate during a session.</li>
+    <li><strong>Camera and motion sensors:</strong> for live scanning and visual features. The camera feed is processed on the device and isn't uploaded.</li>
+    <li><strong>Microphone:</strong> only where an app records or reacts to sound, and only while you're using it.</li>
+    <li><strong>Files and media library:</strong> to play your own music and videos.</li>
+    <li><strong>Local Network and Bluetooth:</strong> to look for devices on your own network or nearby.</li>
+  </ul>
+  <p>You can turn any permission off at any time in Settings.</p>
+  <h2>Sharing and selling</h2>
+  <p>I don't sell, rent or share your information, because I don't have it.</p>
+  <h2>Children</h2>
+  <p>My apps don't knowingly collect information from anyone, including children under 13.</p>
+  <h2>Deleting your data</h2>
+  <p>Delete the app and its data is deleted from your device.</p>
+  <h2>Changes</h2>
+  <p>If an app ever changes how it handles data, I'll update this page and the date above before that update ships.</p>
+  <h2>Contact</h2>
+  <p>Questions about privacy? Email me.</p>
+  <div class="mailbox"><code>alexslem99@gmail.com</code><button type="button" data-copy="alexslem99@gmail.com">Copy email</button></div>
+  <p class="updated">Alex Slem · Absolute Synthesis</p>
+</div>
+<script>document.querySelectorAll('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(b.dataset.copy);b.textContent='Copied'}catch(e){const c=b.previousElementSibling;const r=document.createRange();r.selectNodeContents(c);const s=getSelection();s.removeAllRanges();s.addRange(r)}}))</script>
+
+</body>
+</html>
