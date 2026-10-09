@@ -105,7 +105,7 @@ footer .sig{font-family:var(--display);font-weight:700;font-size:22px;color:var(
     <h1>Living, <span class="grad">breathing</span> code.</h1>
     <canvas class="pulse" id="pulse" aria-hidden="true"></canvas>
     <p class="lede">Every app here has a heartbeat. Breathwork, sanctuaries, games, and tools for iPhone and iPad, built with love and light, free on the App Store.</p>
-    <div class="stats"><span><b id="count-live">12</b> on the App Store</span><span><b id="count-bench">5</b> on the bench</span><span><b>Free</b> to download</span><a href="#about" style="color:var(--rose)">About me</a></div>
+    <div class="stats"><span><b id="count-live">13</b> on the App Store</span><span><b id="count-bench">6</b> on the bench</span><span><b>Free</b> to download</span><a href="#about" style="color:var(--rose)">About me</a></div>
   </header>
 
   <nav class="filters" id="filters" aria-label="Filter apps"></nav>
@@ -184,6 +184,10 @@ const APPS = [
    blurb:'A sacred sanctuary of strategy and mindful world-building, with serene visuals and ethereal lore.',
    feats:['Mindful world-building','Soulful strategy gameplay','Seasonal events and updates'],
    url:'https://apps.apple.com/us/app/etheria-state/id6780234962'},
+  {g:'spirit', name:'Starlight Journaling', sub:'A private night sky of your days', cat:'Lifestyle', icon:'star', hue:'#e6b85c',
+   blurb:'Every entry adds a star to your own night sky. Tag it with one of nine sky moods, and your archive fills with color over time.',
+   feats:['Daily prompts, photos and voice notes','A star calendar, search and mood filters','Face ID lock, on-device only, no account'],
+   url:'https://apps.apple.com/us/app/starlight-journaling/id6815403154'},
 
   {g:'play', name:'The Resonance Cipher', sub:'Quantum Logic Sanctuary', cat:'Simulation', icon:'grid', hue:'#4fa3ff',
    blurb:'Match target frequency patterns on a 5×5 grid against a star field that breathes with your progress.',
@@ -211,9 +215,6 @@ const APPS = [
    feats:['Live room mesh with RealityKit','Proximity HUD for distances','Record scans locally'],
    url:'https://apps.apple.com/us/app/the-obsidian-echo/id6762069395'},
 
-  {g:'bench', name:'Starlight Journaling', sub:'Private journal', cat:'Journal', icon:'moon', hue:'#e6b85c',
-   blurb:'A private journaling app, formerly Obsidian Journal. Waiting on App Store review.',
-   feats:['Private by design','Renamed and resubmitted in fall 2026'], status:'In review'},
   {g:'bench', name:'Run It', sub:'A rehearsal book for dancers', cat:'Music', icon:'dance', hue:'#ff9a6b',
    blurb:'Built for my daughter, who runs her dance solo every Friday night. Run It counts her song in eights, lines up every filmed run with the music, and puts a frame on every count that matters.',
    feats:['Her song mapped into parts, eights, hits and stops','Frames labeled by count, like "B · 8-count 3 · 5"','Corrections pinned to the exact count, shared with her teacher through iCloud'], status:'Public beta',
