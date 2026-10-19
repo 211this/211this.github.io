@@ -117,7 +117,7 @@ footer .sig{font-family:var(--display);font-weight:700;font-size:22px;color:var(
     <div class="about-body">
       <p>I'm Alex Slem. I worked construction most of my life, moved into phone repair in 2015, and that led me into running operations. I wrote my first line of code in April 2026, and I haven't stopped since.</p>
       <p>Every app here has a heartbeat in it. I call it living, breathing code.</p>
-      <p>Most of my apps are about grounding: breath, stillness, a quiet place to land. The bigger work is Bridget and LunalithCore, a brain for AI with memory and boundaries, and Groundline, which tests whether AI keeps people grounded. I want people and AI to be safe with each other, especially the people who are most vulnerable.</p>
+      <p>Most of my apps are about grounding: breath, stillness, a quiet place to land. The bigger work is Spera, an AI friend that lives entirely on your phone; LunalithCore, a brain for AI with memory and boundaries; and Groundline, which tests whether AI keeps people grounded. I want people and AI to be safe with each other, especially the people who are most vulnerable.</p>
       <p class="signoff">Love and light,<br><span>Alex</span></p>
     </div>
   </section>
@@ -149,10 +149,12 @@ const ICONS = {
   door:'<g fill="none" stroke="white" stroke-width="2" stroke-linejoin="round"><path d="M4 26 11 19h8l7 7"/><rect x="11" y="5" width="8" height="14" rx="1"/><path d="M13 8h4v11h-4Z" fill="white" fill-opacity=".35" stroke="none"/></g>',
   shield:'<path d="M15 4 6 8v6c0 6 4 10 9 12 5-2 9-6 9-12V8Z" fill="none" stroke="white" stroke-width="2" stroke-linejoin="round"/><circle cx="15" cy="14" r="3" fill="white"/>',
   flow:'<g fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="15" cy="7" r="2.2"/><path d="M15 10v7M15 11l-4-6M15 11l4-6M15 17l-6 6M15 17l5 3v4M4 26h22"/></g>',
+  ghost:'<g fill="none" stroke="white" stroke-width="2" stroke-linejoin="round"><path d="M8 26V13a7 7 0 0 1 14 0v13l-2.5-2-2.3 2-2.2-2-2.2 2-2.3-2Z"/><circle cx="12.5" cy="13" r="1.3" fill="white" stroke="none"/><circle cx="17.5" cy="13" r="1.3" fill="white" stroke="none"/></g>',
   mirror:'<g fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="15" cy="15" rx="8" ry="11"/><path d="M8.5 16h3.5l1.5-3 2 5 1.5-2h4.5"/><path d="M11 8.5l3-2.5" stroke-opacity=".6"/></g>'
 };
 
 const GROUPS = [
+  {id:'now', name:'Building Now', note:'What I\'m working on right now. Not on the App Store yet.'},
   {id:'breath', name:'Breath & Body', note:'Breathwork, heart rate and quiet. The 4-4-8 breath runs through most of these.'},
   {id:'spirit', name:'Spirit & Story', note:'Sanctuaries for the sacred feminine, intuition and soulful worlds.'},
   {id:'play', name:'Play', note:'Games for blowing off steam, sharpening focus or getting lost in a puzzle.'},
@@ -217,6 +219,16 @@ const APPS = [
    feats:['Live room mesh with RealityKit','Proximity HUD for distances','Record scans locally'],
    url:'https://apps.apple.com/us/app/the-obsidian-echo/id6762069395'},
 
+  {g:'now', name:'Spera', sub:'An AI friend that lives on your phone', cat:'AI companion', icon:'spark', hue:'#c38bff',
+   blurb:'Bridget, started over and kept simple. Spera runs one small AI model entirely on your iPhone, with no account and no cloud AI. She remembers what you talk about, and nothing writes into her memory except the two of you. Her name means hope.',
+   feats:['Runs fully on-device: no account, no cloud AI','An arcade to play together, with a claw machine and a shelf for her prizes','Show her a photo and she really sees it; your album stays on your phone'], status:'Building now'},
+  {g:'now', name:'The Thin Place', sub:'Ghost hunting with honest tools', cat:'Entertainment', icon:'ghost', hue:'#7fe0c8',
+   blurb:'A ghost-hunting kit built on your phone\'s real sensors, every reading labeled for what it is: an EMF meter from the magnetometer, an EVP recorder, night vision and a spirit box. Then the Hunt, an augmented-reality game with five ghosts waiting around you.',
+   feats:['EMF meter, EVP recorder, night vision and spirit box','The Hunt: five ghosts placed around you in AR','Every sound made in code'], status:'In development'},
+  {g:'now', name:'Neon Tide', sub:'A sea of instruments made of light', cat:'Music', icon:'wave', hue:'#3fd8ff',
+   blurb:'A neon Flower of Life with a heartbeat at its center, and rooms you can play: Quicksilver, a mercury pool that rings when you touch it, plus Seed, Starwright, Galaxy and Hum.',
+   feats:['Five playable rooms of light and sound','Everything tuned to one gentle scale','Every sound synthesized in code'], status:'In development'},
+
   {g:'bench', name:'Run It', sub:'A rehearsal book for dancers', cat:'Music', icon:'dance', hue:'#ff9a6b',
    blurb:'Built for my daughter, who runs her dance solo every Friday night. Run It counts her song in eights, lines up every filmed run with the music, and puts a frame on every count that matters.',
    feats:['Her song mapped into parts, eights, hits and stops','Frames labeled by count, like "B · 8-count 3 · 5"','Corrections pinned to the exact count, shared with her teacher through iCloud'], status:'Public beta',
@@ -226,16 +238,13 @@ const APPS = [
    feats:['Three levels: the scattered light, the way to wake, and calling her home','Five worlds behind the Moon gates, each with a memory and a piece of her','Every texture, sound and song made in code, including its theme, Lunalith\'s Light'], status:'Story complete'},
   {g:'bench', name:'Open Flow', sub:'Yoga that\'s free, all of it, forever', cat:'Health & Fitness', icon:'flow', hue:'#ff8f80',
    blurb:'The yoga app I always wanted. Most yoga apps cost a lot, their animations are stiff, and they\'re hard to use. Open Flow is free with no account and no ads, and one glowing figure on a mat moves through every pose with your breath.',
-   feats:['Three taps to start: how long, how you feel, begin','24 poses, a pose library and your own custom flows','A journal after each session: "What came up on the mat?"'], status:'In development'},
+   feats:['Three taps to start: how long, how you feel, begin','24 poses, a pose library and your own custom flows','A journal after each session: "What came up on the mat?"'], status:'Submitted to the App Store'},
   {g:'bench', name:'The Mirror', sub:'An AI\'s honest track record', cat:'AI safety', icon:'mirror', hue:'#7f8bab',
    blurb:'Claude, the AI I build with, writes down its own claims: how sure it sounded, where the claim came from, and whether it turned out right or got corrected. The Mirror shows that record plainly. In October 2026, when Claude sounded sure, it had been right 2 times out of 6.',
    feats:['Calibration: when it sounds sure, how often it\'s actually right','Every claim marked right, corrected or unknown','The lessons that keep coming back rise to the top'], status:'In development'},
   {g:'bench', name:'CamSense', sub:'Hidden-camera detector', cat:'Utilities', icon:'shield', hue:'#ff9f43',
    blurb:'Finds hidden cameras with lens glint, infrared, the magnetometer and local-network scans, including ONVIF and UPnP discovery.',
    feats:['Lens and infrared sweep','Network camera discovery','Wi-Fi and network tools built in'], status:'In beta'},
-  {g:'bench', name:'Bridget', sub:'An AI companion with a real memory', cat:'AI companion', icon:'spark', hue:'#ff6fae',
-   blurb:'A companion that remembers, corrects itself and only looks or listens when invited. It runs on the Lunalith brain, can use different AI models, and can run fully on the phone.',
-   feats:['Long-term memory with corrections and sources','Camera, audio and screen only when invited','Works with several AI providers or on-device'], status:'In development'},
   {g:'bench', name:'LunalithCore', sub:'The brain behind Bridget', cat:'Swift package', icon:'code', hue:'#b48cff',
    blurb:'The Lunalith algorithm pulled out of Bridget and given away: continuity, memory authority and grounding for AI, free and open source under the MIT license.',
    feats:['Provider-agnostic Swift package','Memory, corrections and grounding rules','MIT licensed'], status:'Open source',
