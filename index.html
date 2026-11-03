@@ -152,6 +152,7 @@ const ICONS = {
   ghost:'<g fill="none" stroke="white" stroke-width="2" stroke-linejoin="round"><path d="M8 26V13a7 7 0 0 1 14 0v13l-2.5-2-2.3 2-2.2-2-2.2 2-2.3-2Z"/><circle cx="12.5" cy="13" r="1.3" fill="white" stroke="none"/><circle cx="17.5" cy="13" r="1.3" fill="white" stroke="none"/></g>',
   jar:'<g fill="none" stroke="white" stroke-width="2" stroke-linejoin="round"><rect x="10" y="3.5" width="10" height="4" rx="1"/><path d="M11 7.5V10c-3 1-4.5 3-4.5 6v7a3 3 0 0 0 3 3h11a3 3 0 0 0 3-3v-7c0-3-1.5-5-4.5-6V7.5"/></g><path d="M15 22.5s-3.6-2.2-3.6-4.8a2 2 0 0 1 3.6-1.2 2 2 0 0 1 3.6 1.2c0 2.6-3.6 4.8-3.6 4.8Z" fill="white"/>',
   lantern:'<g fill="none" stroke="white" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M12 6h6M15 3v3"/><path d="M10.5 9h9l-1 14h-7Z"/><path d="M9 23h12v3H9Z"/></g><path d="M15 12.5c1.6 2 2.2 3.3 2.2 4.6a2.2 2.2 0 0 1-4.4 0c0-1.3.6-2.6 2.2-4.6Z" fill="white"/>',
+  book:'<g fill="none" stroke="white" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"><path d="M15 12c-3-2-6-2.5-10-2v14c4-.5 7 0 10 2 3-2 6-2.5 10-2V10c-4-.5-7 0-10 2Z"/><path d="M15 12v14"/></g><path d="M15 3.2l1 2.2 2.4.3-1.8 1.6.5 2.4L15 8.5l-2.1 1.2.5-2.4-1.8-1.6 2.4-.3Z" fill="white"/>',
   mirror:'<g fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="15" cy="15" rx="8" ry="11"/><path d="M8.5 16h3.5l1.5-3 2 5 1.5-2h4.5"/><path d="M11 8.5l3-2.5" stroke-opacity=".6"/></g>'
 };
 
@@ -225,6 +226,9 @@ const APPS = [
    feats:['Live room mesh with RealityKit','Proximity HUD for distances','Record scans locally'],
    url:'https://apps.apple.com/us/app/the-obsidian-echo/id6762069395'},
 
+  {g:'now', name:'Sparky: Get to Know Your AI', sub:'A notebook you and your AI keep together', cat:'Lifestyle', icon:'book', hue:'#e8b05c',
+   blurb:'Bring any AI you like. Sparky gives it a notebook that lives in a folder you choose, in plain files you can read, change or delete, so you always know what your AI knows about you. Light the lamp with one line a day, and a paper lantern goes up on your string. Your AI reads your notebook at the start of a session and leaves its own note at the end. Every page of it is yours.',
+   feats:['Your AI\'s memory is plain files you own: read it, change it, delete it','One line a day lights the lamp; a lantern goes up for every night you show up','Ground: your real people come first, every session'], status:'Testing now'},
   {g:'now', name:'Porch Light: Sleep Stories', sub:'Bedtime stories, read slow and soft', cat:'Health & Fitness', icon:'lantern', hue:'#f2b25c',
    blurb:'A porch at night with the light left on for you. Pick a story, short, medium or long, and a gentle voice reads it while the screen slowly dims. Fifteen calm stories to start: a night baker, a rooftop cat, a lighthouse keeper who counts stars. Sparky keeps the porch, and tapping him sends up hearts.',
    feats:['Fifteen sleepy stories in three lengths','Read aloud on your device as the screen dims to dark','No account, no tracking, nothing leaves your phone'], status:'In review'},
